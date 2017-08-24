@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="search-container row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="text-center">
+        <h1>SYNONYMS</h1>
+      </div>
+      <app-ng-search-input></app-ng-search-input>
+    </div>
+  </div>
+  <div class="results-container row">
+    <div class="col-sm-6 col-sm-offset-3" >
+      <app-ng-button *ngFor="let item of items">{{item}}</app-ng-button>
+    </div>
+  </div>
+</div>
+
