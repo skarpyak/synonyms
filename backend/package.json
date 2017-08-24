@@ -1,0 +1,24 @@
+{
+  "name": "synonyms-backend",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --harmony index.js",
+    "dev": "nodemon index.js",
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "memory-cache": "^0.2.0",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "request": "^2.81.0",
+    "supertest": "^3.0.0"
+  }
+}

@@ -10,7 +10,8 @@
   </div>
   <div class="results-container row">
     <div class="col-sm-6 col-sm-offset-3" >
-      <app-ng-button *ngFor="let item of items">{{item}}</app-ng-button>
+      <app-ng-button *ngFor="let synonym of model.synonyms" [synonym]="synonym">{{synonym}}</app-ng-button>
+      <div class="text-center" *ngIf="isShowNoResults()">No results found</div>
     </div>
   </div>
 </div>

@@ -1,8 +1,16 @@
 <div class="input-group search-input">
-  <input type="text" class="form-control" placeholder="Search" >
+  <input
+    type="text"
+    class="form-control input-field"
+    placeholder="Search"
+    [value]="word"
+    (input)="onChange($event.target.value)"
+    [formControl]="ctrl"
+  >
   <span class="input-group-addon">
     <button type="submit">
       <span class="glyphicon glyphicon-search"></span>
     </button>
   </span>
 </div>
+

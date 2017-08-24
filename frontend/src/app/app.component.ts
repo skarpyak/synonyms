@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { } from 'ng-button/ng-button.component';
+import { Component, ViewEncapsulation } from '@angular/core';
+import {State, Store} from "@ngrx/store";
+import { Model } from "./models/synonyms.model";
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,16 @@ import { } from 'ng-button/ng-button.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'synonymss';
+  public model;
 
+  constructor(private _store: Store<Model>) {
+    _store.select('synonyms').subscribe(state => this.model = state);
+  }
 
-  items = ['test1', 'test2'];
+  isShowNoResults() {
+    const { isLoaded, synonyms } = this.model;
+
+    return (isLoaded && !synonyms.length);
+  }
 }
