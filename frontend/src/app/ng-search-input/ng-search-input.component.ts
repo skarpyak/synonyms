@@ -9,8 +9,7 @@ import 'rxjs/add/operator/debounceTime';
 @Component({
   selector: 'app-ng-search-input',
   templateUrl: './ng-search-input.component.html',
-  styleUrls: ['ng-search-input.component.scss'],
-  providers: []
+  styleUrls: ['ng-search-input.component.scss']
 })
 export class NgSearchInputComponent implements OnInit {
   public word: string;

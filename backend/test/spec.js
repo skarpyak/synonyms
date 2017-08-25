@@ -7,9 +7,9 @@ describe('loading express', function () {
   afterEach(function () {
     server.close();
   });
-  it('responds to /:word',(done) => {
+  it('responds to /api/words/:word',(done) => {
     request(server)
-      .get('/foo')
+      .get('/api/words/foo')
       .expect(200, done);
   });
   it('404 everything else',(done) => {

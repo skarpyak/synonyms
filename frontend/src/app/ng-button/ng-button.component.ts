@@ -1,6 +1,6 @@
 import { Component, OnInit, Input  } from '@angular/core';
 import { CHANGE_SEARCH_WORD } from "../reducers/synonyms";
-import {State, Store} from "@ngrx/store";
+import { State, Store } from "@ngrx/store";
 import { Model } from "../models/synonyms.model";
 import { NgSynonymsService } from "../services/synonyms/ng-synonyms.service";
 
